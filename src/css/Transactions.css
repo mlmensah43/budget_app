@@ -1,0 +1,45 @@
+.transactions{
+    align-items: center;
+}
+
+.transactions div{
+    margin: 1vh;
+}
+
+.transaction{
+    justify-content: space-between;
+}
+
+.recent-transaction{
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 4vmin;
+}
+
+.info{
+    opacity: 50%;
+    font-size: 80%;
+}
+
+.filters{
+    justify-content: space-around;
+}
+
+.filter{
+    background: #70707027;
+    border-radius: 15px;
+    width: 15vw;
+    height: 3vh;
+    text-align: center;
+}
+
+.filter-off{
+    opacity: 65%;
+}
+
+@media only screen and (min-width: 1000px) {
+    .filter{
+      width: 5vw;
+    }
+    
+  }

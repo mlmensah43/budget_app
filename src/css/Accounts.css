@@ -1,0 +1,17 @@
+.accounts{
+    align-items: center;
+}
+
+.accounts div{
+    margin: 1vh;
+}
+
+.account li {
+    justify-content: space-between;
+}
+
+.title{
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 4vmin;
+}

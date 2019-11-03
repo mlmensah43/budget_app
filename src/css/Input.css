@@ -1,0 +1,31 @@
+.Input{
+    justify-content: center;
+}
+
+.input{
+    background: white;
+    border-radius: 30px;
+    width: 70vw;
+    height: 5vh;
+    padding: 0 5vw;
+    justify-content: space-between;
+}
+
+.amount{
+    width: 5em;
+}
+
+.input-icon{
+   width: 2em;
+   height: 2em;
+}
+
+input{
+    border: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .input{
+      width: 20vw;
+    }
+  }
