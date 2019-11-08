@@ -89,7 +89,7 @@ form{
   margin: 3vh;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1050px) {
   .logo-hider-mobile{
     visibility: hidden;
   }

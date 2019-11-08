@@ -30,7 +30,7 @@ input{
     border: none;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1050px) {
     .input{
       width: 30vw;
     }

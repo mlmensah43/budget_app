@@ -41,7 +41,7 @@
     width: 3vmin;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
     .Landing{
         grid-template-columns: 1fr 3fr 1fr;
         background: none;
