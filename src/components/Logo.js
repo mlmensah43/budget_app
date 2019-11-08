@@ -6,7 +6,7 @@ function Logo() {
     <div className="Logos">
 
       <div className="logo flex-row">
-        <div><img src={require("../images/calculator.png")} alt="logo"></img></div>
+        <div><img src={require("../images/logo.png")} alt="logo"></img></div>
       </div>
       
     </div>

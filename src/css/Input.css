@@ -7,8 +7,14 @@
     border-radius: 30px;
     width: 70vw;
     height: 5vh;
-    padding: 0 5vw;
+    padding: 0 1vw;
     justify-content: space-between;
+    border-right: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 6px rgba(192, 191, 191, 0.25);
+}
+
+.input-item{
+    border-right: rgba(0, 0, 0, 0.3);
 }
 
 .amount{
@@ -26,6 +32,6 @@ input{
 
 @media only screen and (min-width: 1000px) {
     .input{
-      width: 20vw;
+      width: 30vw;
     }
-  }
+}

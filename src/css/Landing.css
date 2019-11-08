@@ -1,8 +1,8 @@
 .Landing{
-    grid-template-columns: 1fr 3fr .5fr 5fr;
-    grid-auto-rows: minmax(50px, auto);
-    /* background: rgba(255, 0, 0, 0.322); */
+    grid-template-columns: 1fr 3fr 1fr 5fr;
+    grid-auto-rows: minmax(10px, auto);
     grid-gap: 1em;
+
     background: 
     linear-gradient(
       rgba(0, 0, 0, 0.25), 
@@ -12,29 +12,23 @@
     background-repeat: no-repeat; 
     background-size: 50% 100%;
     background-position: right top;
-    height: 100vh;
+    height: 110vh;
 }
-
-/* .Landing div{
-    background: rgba(0, 0, 0, 0.089);
-} */
 
 .center{
     grid-column: 2/3;
 }
-
 
 .header{
     font-weight: 700;
     font-size: 3vmax;
 }
 
-/* .subject{
-
-} */
+.false{
+    opacity: 40%;
+}
 
 .subject-2{
-    margin: 0 0;
     opacity: 60%;
 }
 
@@ -53,9 +47,3 @@
         background: none;
     }
   }
-
-  /* @media only screen and (max-width: 450px) {
-    .logo-hider-desktop{
-        grid-column: 1/1;
-      }
-  } */

@@ -1,10 +1,11 @@
 body{
   font-family: 'Roboto', sans-serif; 
-  background: url('../images/background.png');
+  background: url('../images/cloudyknoxville.png');
   background-attachment: fixed;
   background-repeat: no-repeat; 
   background-size: cover;
   margin: 0;
+  width: 100vw;
 }
 
 .grid{
@@ -29,12 +30,9 @@ button{
 }
 
 .logo{
-  /* font-weight: 700; 
-   font-size: 2vmax; */
-  color: #0093FF;
   align-items: center;
   justify-content: center;
-  margin: 5vmin 0;
+  /* margin: 5vmin 0; */
 }
 .logo img{
   width: 90%
@@ -48,7 +46,7 @@ button{
   visibility: hidden;
 }
 
-.dropdown{
+.dropdown-arrow{
   width: 2vh;
   height: 2vh;
 }
@@ -62,7 +60,8 @@ button{
 }
 
 .gray-box{
-  background: #70707027;
+  background: white;
+  box-shadow: 0 3px 6px rgba(192, 191, 191, 0.25);
   border-radius: 15px;
   width: 70vw;
   height: 20vh;
@@ -75,7 +74,19 @@ button{
 
 .box-header{
   justify-content: space-between;
+  /* padding: 0 2vw 0 2vw; */
   align-items: center;
+  width: 68%;
+}
+
+input{
+  text-indent: 15px;
+}
+
+form{
+  text-align: center;
+  align-items: center;
+  margin: 3vh;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -89,5 +100,9 @@ button{
 
   .gray-box{
     width: 30vw
+  }
+
+  .box-header{
+    width: 90%;
   }
 }

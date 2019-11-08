@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/App.css'
 import '../css/Transactions.css';
+import { tsPropertySignature } from '@babel/types';
 
 
 function displayTransaction(place, location, amount, date, type){
@@ -20,7 +21,7 @@ function displayTransaction(place, location, amount, date, type){
     );
 }
 
-function Transactions() {
+function Transactions(props) {
   return (
     <div className="Transactions">
 
@@ -30,7 +31,7 @@ function Transactions() {
         <div className="transactions flex-col">
 
                 <div className="box-header flex-row">
-                    <span className="title">Recent Transactions</span>
+                    <span className="title">{props.title}</span>
                     <div><button><img className="icon" src={require("../images/edit.png")} alt="edit"></img></button></div>
                 </div>
 

@@ -1,13 +1,13 @@
 import React from 'react';
-// import Landing from './Landing'
-import Summary from './Summary'
+import Landing from './Landing'
+// import Main from './Main'
 import '../css/App.css';
 
 function App() {
   return (
     <div className="App">
 
-        <Summary></Summary>
+        <Landing></Landing>
       
     </div>
   );

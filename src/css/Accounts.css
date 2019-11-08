@@ -3,15 +3,16 @@
 }
 
 .accounts div{
-    margin: 1vh;
+    margin: .4vh;
 }
 
 .account li {
     justify-content: space-between;
+    margin: 1.5vh;
 }
 
 .title{
     align-self: flex-start;
     font-weight: 700;
-    font-size: 4vmin;
+    font-size: 1.5vmax;
 }

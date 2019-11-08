@@ -14,7 +14,7 @@ function displayAccount(account, amount, type){
 }
 
 
-function Accounts() {
+function Accounts(props) {
   return (
     <div className="Accounts">
 
@@ -23,7 +23,7 @@ function Accounts() {
         <div className="accounts flex-col">
 
             <div className="box-header flex-row">
-                <span className="title">Account Balances</span>
+                <span className="title">{props.title}</span>
                 <div><button><img className="icon" src={require("../images/edit.png")} alt="edit"></img></button></div>
             </div>
 
