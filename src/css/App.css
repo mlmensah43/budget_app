@@ -59,14 +59,6 @@ button{
   color: #D90707;
 }
 
-.gray-box{
-  background: white;
-  box-shadow: 0 3px 6px rgba(192, 191, 191, 0.25);
-  border-radius: 15px;
-  width: 70vw;
-  height: 20vh;
-}
-
 .icon{
   width: 1.5em;
   height: 1.5em;
@@ -89,6 +81,14 @@ form{
   margin: 3vh;
 }
 
+.white-box{
+    background: white;
+    box-shadow: 0 3px 6px rgba(192, 191, 191, 0.25);
+    border-radius: 15px;
+    width: 70vw;
+    height: 25vh;
+}
+
 @media only screen and (min-width: 1050px) {
   .logo-hider-mobile{
     visibility: hidden;
@@ -98,7 +98,7 @@ form{
     visibility: visible;
   }
 
-  .gray-box{
+  .white-box{
     width: 30vw
   }
 

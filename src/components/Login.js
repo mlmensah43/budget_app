@@ -1,17 +1,18 @@
 import React from 'react';
 import '../css/Login.css';
-import {
-    HashRouter as Router,
-    Route,
-    Link
-  } from "react-router-dom";
+// import {
+//     HashRouter as Router,
+//     Route,
+//     Link
+//   } from "react-router-dom";
 
 
 
 class Login extends React.Component {
 
     state={
-        login: true
+        login: true,
+        password: ''
     }
 
     toggle = (x) =>{
@@ -19,7 +20,7 @@ class Login extends React.Component {
     }
 
     handleLogin = () =>{
-        
+
     }
 
     handleSignUp = () =>{
@@ -34,8 +35,8 @@ class Login extends React.Component {
                     
                     <form className="flex-col">
                         <div className="flex-col login-inputs">
-                            <input type="email" className="form-login" placeholder="Email Address" required></input>
-                            <input type="password" className="form-signup" placeholder="Password" required></input>
+                            <input type="email" className="input-else" placeholder="Email Address" required></input>
+                            <input type="password" className="input-else" placeholder="Password" required></input>
                         </div>
         
                         <div className="submit">
@@ -52,10 +53,14 @@ class Login extends React.Component {
                     <form className="flex-col">
 
                         <div className="flex-col login-inputs">
-                            <input type="text" placeholder="Full Name" required></input>
-                            <input type="email" placeholder="Email Address" required></input>
-                            <input type="password" placeholder="Password" required></input>
-                            <input type="password" placeholder="Confirm Password" required></input>
+                            <div className="flex-row input-names">
+                                <div><input className="input-name" type="text" placeholder="First Name" required></input></div>
+                                <div><input className="input-name" type="text" placeholder="Last Name" required></input></div>
+                            </div>
+                            {/* <input type="text" placeholder="Full Name" required></input> */}
+                            <input className="input-else" type="email" placeholder="Email Address" required></input>
+                            <input onChange={event => this.setPassword(event.target.value)} className="input-else" type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required></input>
+                            <input className="input-else" type="password" placeholder="Confirm Password" pattern={this.state.password}  title="Passwords do not match" required></input>
                         </div>
         
                         <div className="submit">
@@ -65,6 +70,10 @@ class Login extends React.Component {
                 </div>
             );
         }
+    }
+
+    setPassword = (x) =>{
+        this.setState({password: x})
     }
 
 

@@ -5,6 +5,7 @@ import Accounts from './Accounts';
 import Input from './Input';
 import '../css/App.css'
 import '../css/Main.css';
+// import { thisExpression } from '@babel/types';
 
 let balance = '6,500';
 
@@ -48,19 +49,19 @@ class Main extends React.Component {
     showPage = () =>{
         if(this.state.currentPage === 'Summary'){
             return(
-                <div>
-                    <Input></Input>
-                    <Transactions title="Recent Transactions"></Transactions>
-                    <Accounts title="Account Balances"></Accounts>
+                <div className="flex-col">
+                    <div className="right-col"><Input></Input></div>
+                    <div className="right-col"><Transactions title="Recent Transactions"></Transactions></div>
+                    <div className="right-col"><Accounts title="Account Balances"></Accounts></div>
                 </div>
             );
         }
         else if(this.state.currentPage === 'Budget'){
             return(
                 <div>
-                    <Input></Input>
-                    <Transactions title="Expected Transactions"></Transactions>
-                    <Accounts title="Estimated Account Balances"></Accounts>
+                    <div className="right-col"><Input></Input></div>
+                    <div className="right-col"><Transactions title="Expected Transactions"></Transactions></div>
+                    <div className="right-col"><Accounts title="Estimated Account Balances"></Accounts></div>
                 </div>
             );
         }
@@ -68,7 +69,7 @@ class Main extends React.Component {
 
     render(){
         return (
-            <div className="Summary grid">
+            <div className="Main grid">
 
                 {/* Toggles between summary page and budget page */}
                 <div>

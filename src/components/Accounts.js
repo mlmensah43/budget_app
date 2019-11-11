@@ -27,7 +27,7 @@ function Accounts(props) {
                 <div><button><img className="icon" src={require("../images/edit.png")} alt="edit"></img></button></div>
             </div>
 
-            <div className="gray-box">
+            <div className="white-box">
                 <ul>
                     {displayAccount('Checking', '1,878','income')}
                     {displayAccount('Savings','7,265','income')}
