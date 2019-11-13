@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/budget_app/static/css/main.3183ecca.chunk.css",
+    "main.js": "/budget_app/static/js/main.11fe1de2.chunk.js",
+    "main.js.map": "/budget_app/static/js/main.11fe1de2.chunk.js.map",
+    "runtime-main.js": "/budget_app/static/js/runtime-main.66217b42.js",
+    "runtime-main.js.map": "/budget_app/static/js/runtime-main.66217b42.js.map",
+    "static/js/2.01a8ccfe.chunk.js": "/budget_app/static/js/2.01a8ccfe.chunk.js",
+    "static/js/2.01a8ccfe.chunk.js.map": "/budget_app/static/js/2.01a8ccfe.chunk.js.map",
+    "index.html": "/budget_app/index.html",
+    "precache-manifest.8cf6f6546237f392c47f1e2a74adaabe.js": "/budget_app/precache-manifest.8cf6f6546237f392c47f1e2a74adaabe.js",
+    "service-worker.js": "/budget_app/service-worker.js",
+    "static/css/main.3183ecca.chunk.css.map": "/budget_app/static/css/main.3183ecca.chunk.css.map",
+    "static/media/App.css": "/budget_app/static/media/cloudyknoxville.acc2904e.png",
+    "static/media/logo.png": "/budget_app/static/media/logo.cad67b2b.png",
+    "static/media/Landing.css": "/budget_app/static/media/piggy.76e271f3.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66217b42.js",
+    "static/js/2.01a8ccfe.chunk.js",
+    "static/css/main.3183ecca.chunk.css",
+    "static/js/main.11fe1de2.chunk.js"
+  ]
+}
