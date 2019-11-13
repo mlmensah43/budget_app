@@ -2,10 +2,7 @@ import React from 'react';
 import Landing from './Landing'
 import Main from './Main'
 import '../css/App.css';
-import {
-  HashRouter as Router,
-  Route
-} from "react-router-dom";
+import {HashRouter as Router,Route} from "react-router-dom";
 
 function App() {
   return (
