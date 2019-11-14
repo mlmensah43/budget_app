@@ -15,12 +15,27 @@ class Login extends React.Component {
         password: ''
     }
 
+    componentDidMount(){
+        this.test();
+    }
+
     toggle = (x) =>{
         this.setState({login: x})
     }
 
-    handleLogin = () =>{
 
+
+
+    async test(){
+        // const response = await fetch('http://localhost:4000/api');
+        // const users = await response;
+        // console.log(users.password);
+        fetch('https://budgetmlm.herokuapp.com/#/api')
+        .then(response => response.json())
+        .then(({data})=>{
+            console.log(data[0].email);
+        })
+        .catch(err => {console.log(err)})
     }
 
     handleSignUp = () =>{
@@ -40,7 +55,7 @@ class Login extends React.Component {
                         </div>
         
                         <div className="submit">
-                            <button type="submit" onSubmit={this.handleLogin}>Login</button>
+                            <button type="submit" onSubmit={(e)=> this.test(e)}>Login</button>
                         </div>       
                     </form>
                 </div>
@@ -64,7 +79,7 @@ class Login extends React.Component {
                         </div>
         
                         <div className="submit">
-                            <button type="submit" onSubmit={this.handleSignUp}>Sign up</button>
+                            <button type="submit" onSubmit={()=> this.handleSignUp()}>Sign up</button>
                         </div>       
                     </form>
                 </div>

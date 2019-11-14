@@ -16,10 +16,31 @@ const db = mysql.createConnection({
 });
 
 db.connect(function(err){
-    if(err){console.log('error')};
+    if(err){console.log('error');}
+    else{
+        console.log('Database connection succesfull');
+    }
 })
 
+//query database
+const SELECT_ALL = 'SELECT * FROM users'
+app.get('/api', (req, res) =>{
+    db.query(SELECT_ALL, (err, results)=>{
+        if(err){
+            return res.send(err);
+        }
+        else{
+            return res.json({
+                data: results
+            })
+        }
+    });
+});
+
 //connect to server
+//process.env.PORT, process.env.IP
 app.listen(process.env.PORT, process.env.IP, () =>{
     console.log('Connected to server');
 });
+
+module.export
