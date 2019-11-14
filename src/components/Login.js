@@ -30,7 +30,7 @@ class Login extends React.Component {
         // const response = await fetch('http://localhost:4000/api');
         // const users = await response;
         // console.log(users.password);
-        fetch('https://budgetmlm.herokuapp.com/#/api')
+        fetch('https://budgetmlm.herokuapp.com/api')
         .then(response => response.json())
         .then(({data})=>{
             console.log(data[0].email);
