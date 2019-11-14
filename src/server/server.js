@@ -23,18 +23,22 @@ db.connect(function(err){
 })
 
 //query database
-const SELECT_ALL = 'SELECT * FROM users'
+// const SELECT_ALL = 'SELECT * FROM users'
+// app.get('/api', (req, res) =>{
+//     db.query(SELECT_ALL, (err, results)=>{
+//         if(err){
+//             return res.send(err);
+//         }
+//         else{
+//             return res.json({
+//                 data: results
+//             })
+//         }
+//     });
+// });
+
 app.get('/api', (req, res) =>{
-    db.query(SELECT_ALL, (err, results)=>{
-        if(err){
-            return res.send(err);
-        }
-        else{
-            return res.json({
-                data: results
-            })
-        }
-    });
+    res.send('Welcome to the API page!');
 });
 
 //connect to server

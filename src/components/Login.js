@@ -16,7 +16,7 @@ class Login extends React.Component {
     }
 
     componentDidMount(){
-        this.test();
+        // this.test();
     }
 
     toggle = (x) =>{
