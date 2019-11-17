@@ -16,7 +16,6 @@ function Landing () {
                     <Logo></Logo>
                 </div>
 
-
                 <div className="center">
                     <div className="subject">
                         <div className="header">Budgeting Made Easy</div>

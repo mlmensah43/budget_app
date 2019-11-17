@@ -23,27 +23,27 @@ db.connect(function(err){
 })
 
 //query database
-// const SELECT_ALL = 'SELECT * FROM users'
-// app.get('/api', (req, res) =>{
-//     db.query(SELECT_ALL, (err, results)=>{
-//         if(err){
-//             return res.send(err);
-//         }
-//         else{
-//             return res.json({
-//                 data: results
-//             })
-//         }
-//     });
-// });
-
+const SELECT_ALL = 'SELECT * FROM users'
 app.get('/api', (req, res) =>{
-    res.send('Welcome to the API page!');
+    db.query(SELECT_ALL, (err, results)=>{
+        console.log(results);
+        if(err){
+            return res.send(err);
+        }
+        else{
+            return res.send(results);
+        }
+
+    });
 });
 
+// app.get('/api', (req, res) =>{
+//     res.send('Welcome to the API page!');
+// });
+
 //connect to server
-//process.env.PORT, process.env.IP
-app.listen(process.env.PORT, process.env.IP, () =>{
+const port = process.env.PORT;
+app.listen(port, () =>{
     console.log('Connected to server');
 });
 
