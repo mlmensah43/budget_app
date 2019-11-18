@@ -29,7 +29,7 @@ class Login extends React.Component {
 
 
     async test(){
-        const response = await fetch('https://budgetmlm.herokuapp.com/#/api');
+        const response = await fetch('https://budgetmlm.herokuapp.com/api');
         const data = await response.json();
         this.setState({users: data});
 
