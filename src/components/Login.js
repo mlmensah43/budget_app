@@ -15,23 +15,27 @@ class Login extends React.Component {
         users: '',
     }
 
-    componentDidMount(){
-        this.test().catch(err => {
-            console.error(err)
-        })
-    }
-
     toggle = (x) =>{
         this.setState({login: x})
     }
 
+    setPassword = (x) =>{
+        this.setState({password: x})
+    }
 
+    componentDidMount(){
+        this.fetchUsers().catch(err => {
+            console.error(err)
+        })
+    }
 
+    
 
-    async test(){
-        const response = await fetch('https://budgetmlm.herokuapp.com/api');
+    async fetchUsers(){
+        const response = await fetch('/api');
         const data = await response.json();
         this.setState({users: data});
+        this.setState({name: this.state.users[0].first_name});
 
         // fetch('http://localhost:4000/api')
         // .then(response => response.json())
@@ -42,9 +46,17 @@ class Login extends React.Component {
         
     }
 
+    test = () =>{
+        return(
+        <div>{this.state.name}</div>
+        );
+        //console.log(this.state.users[0].email);
+    }
+
     handleLogin = (event) => {
         event.preventDefault();
         const target = event.target
+        //console.log(this.state.users[0].email)
 
         for(let user of this.state.users){
             if(target[0].value === user.email){
@@ -110,10 +122,6 @@ class Login extends React.Component {
         }
     }
 
-    setPassword = (x) =>{
-        this.setState({password: x})
-    }
-
 
     render(){
         return( 
@@ -124,6 +132,7 @@ class Login extends React.Component {
                     <button className={`login-header ${!this.state.login}`} onClick={()=> this.toggle(false)}>Sign up</button>
                 </div>
                 {this.showForm()}
+                {this.test()}
             </div>
             
         ); 
