@@ -13,6 +13,7 @@ class Login extends React.Component {
     state={
         login: true,
         users: '',
+        password: ''
     }
 
     toggle = (x) =>{
@@ -35,7 +36,6 @@ class Login extends React.Component {
         const response = await fetch('/api');
         const data = await response.json();
         this.setState({users: data});
-        this.setState({name: this.state.users[0].first_name});
 
         // fetch('http://localhost:4000/api')
         // .then(response => response.json())
@@ -47,10 +47,7 @@ class Login extends React.Component {
     }
 
     test = () =>{
-        return(
-        <div>{this.state.name}</div>
-        );
-        //console.log(this.state.users[0].email);
+        //console.log(this.state.users[0].password)
     }
 
     handleLogin = (event) => {
@@ -63,16 +60,36 @@ class Login extends React.Component {
 
                 if(target[1].value === user.password){
                     alert('Login succesful');
+                    //redirect!
+                }
+                else{
+                    alert('Invalid login credentials(password)')
                 }
             }
             else{
-                alert('Invalid login credentials')
+                alert('Invalid login credentials(email)')
             }
         }
         
     }
 
-    handleSignUp = () =>{
+    handleSignUp = (event) =>{
+        event.preventDefault();
+        const target = event.target
+
+        const options = {
+            method: 'POST',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                first_name: target[0].value,
+                last_name: target[1].value,
+                email: target[2].value,
+                password: target[3].value
+            })
+        };
+        fetch('/api', options);
 
     }
 
@@ -101,7 +118,7 @@ class Login extends React.Component {
         else if(this.state.login === false){
             return(
                 <div>
-                    <form className="flex-col">
+                    <form onSubmit={this.handleSignUp} className="flex-col">
 
                         <div className="flex-col login-inputs">
                             <div className="flex-row input-names">
@@ -114,7 +131,7 @@ class Login extends React.Component {
                         </div>
         
                         <div className="submit">
-                            <button type="submit" onSubmit={()=> this.handleSignUp()}>Sign up</button>
+                            <button type="submit">Sign up</button>
                         </div>       
                     </form>
                 </div>
